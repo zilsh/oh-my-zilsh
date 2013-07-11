@@ -15,3 +15,7 @@ for plugin ($omz_plugins); do
 		source $PWD/plugins/$plugin/$plugin.plugin.zsh
 	fi
 done
+
+for theme_file ($PWD/themes/*.zsh-theme); do
+	zsh_themes[$theme_name]=${theme_file:a}
+done
