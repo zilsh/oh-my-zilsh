@@ -3,10 +3,12 @@
 fpath=($PWD/oh-my-zsh/functions $PWD/oh-my-zsh/completions $fpath)
 
 for config_file ($PWD/oh-my-zsh/lib/*.zsh); do
+	_zilsh_debug "    Loading $config_file."
 	source $config_file
 done
 
 for plugin ($omz_plugins); do
+	_zilsh_debug "    Loading $plugin plugin."
 	if [[ -f "$PWD/oh-my-zsh/plugins/$plugin/$plugin.plugin.zsh"
 	 || -f "$PWD/oh-my-zsh/plugins/$plugin/$plugin/_$plugin" ]]; then
 		fpath=($PWD/oh-my-zsh/plugins/$plugin $fpath)
