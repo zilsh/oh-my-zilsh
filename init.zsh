@@ -19,5 +19,6 @@ for plugin ($omz_plugins); do
 done
 
 for theme_file ($PWD/oh-my-zsh/themes/*.zsh-theme); do
-	zsh_themes[$theme_name]=${theme_file:a}
+	_zilsh_debug "    Loading ${theme_file:t} theme."
+	zsh_themes[${theme_file:t}]=${theme_file:a}
 done
