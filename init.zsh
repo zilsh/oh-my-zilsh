@@ -1,5 +1,4 @@
-#!/usr/bin/env zsh
-local OMZ_PATH="$(cd "$(dirname "$0")" && pwd)/oh-my-zsh"
+local OMZ_PATH="$BUNDLE_DIR/oh-my-zsh"
 
 fpath=($OMZ_PATH/functions $OMZ_PATH/completions $fpath)
 
